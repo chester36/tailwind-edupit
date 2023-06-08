@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    @apply mx-auto p-[1.5rem] w-full max-w-[140rem] lg:max-w-[80rem];
+}
+
+@layer components{
+    .header{
+        @apply lg:bg-primgreen
+    }
+    .header__content{
+        @apply p-5 hidden lg:flex lg:justify-between text-white text-[15px] font-semibold font-sans
+    }
+    .header__mob img{
+        @apply mt-5 flex lg:hidden mx-auto w-[10rem]
+    }
+    .header__address ul{
+        @apply lg:flex
+    }
+    .header__address ul li{
+        @apply mr-4
+    }
+    .header__socials ul li{
+        @apply mr-4
+    }
+    .header__socials ul li a i:hover{
+        @apply text-black
+    }
+    .header__log ul li{
+        @apply mr-5
+    }
+    .header__log ul{
+        @apply items-center
+    }
+    .header__log span{
+        @apply cursor-pointer h-[.1rem] w-[1rem] rotate-[90deg]  bg-white  translate-x-[-.5rem]
+    }
+
+    /*---------nav-----------*/
+    .toggle__menu{
+        @apply lg:hidden;
+    }
+    .toggle__menu span{
+        @apply h-[.2rem] w-[1.5rem] block bg-white  transition-all;
+    }
+    .toggle__menu span:nth-child(2){
+        @apply my-1;
+    }
+    .toggle__menu.open{
+        @apply rotate-180 transition-all duration-300;
+    }
+    .toggle__menu.open span:first-child{
+        @apply w-[1.5rem] rotate-[45deg] translate-y-[.6rem] transition-all delay-100;
+    }
+    .toggle__menu.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .toggle__menu.open span:last-child{
+        @apply w-[1.5rem]  rotate-[-45deg]  translate-y-[-.2rem] transition-all delay-100;
+    }
+
+    /* .toggle__menu2{
+        @apply lg:hidden
+    }
+    .toggle__menu2 span{
+        @apply h-[.2rem] w-[1rem] block bg-black transition-all;
+    }
+    .toggle__menu2 span:nth-child(2){
+        @apply rotate-90 mt-[-.2rem];
+    } */
+
+    .header__nav__item h4{
+        @apply flex justify-between
+    }
+    /* .header__nav__item ul li{
+        @apply mx-10
+    } */
+    
+    .drop-down{
+        @apply hidden
+    }
+}
